@@ -4,29 +4,54 @@
     <meta charset="utf-8">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/tictactoe.js"></script>
-
   </head>
+
   <body>
     <div class="container">
-      <h1>GA SEiR01 - Project0</h1>
-      <h1>Tic-Tac-Toe</h1>
 
-        <div class="grid">
-          <div class="box" id="1"></div><!--
-        --><div class="box" id="2"></div><!--
-        --><div class="box" id="3"></div><!--
-        --><div class="box" id="4"></div><!--
-        --><div class="box" id="5"></div><!--
-        --><div class="box" id="6"></div><!--
-        --><div class="box" id="7"></div><!--
-        --><div class="box" id="8"></div><!--
-        --><div class="box" id="9"></div>
-        </div>
+  <!-- title -->
+      <header>
+        <h2>Tic-Tac-Toe</h2>
+      </header>
 
-      </div>
+  <!-- score board -->
+      <nav>
+        <p class="player1">Player 1</p>
+          <p id="player1Score">0</p>
+          <p>:</p>
+          <p id="player2Score">0</p>
+        <p class="player2">Player 2</p>
+      </nav>
 
+  <!-- gameBoard -->
+      <main class="gameBoard">
+          <div class="box" id="1"></div>
+          <div class="box" id="2"></div>
+          <div class="box" id="3"></div>
+          <div class="box" id="4"></div>
+          <div class="box" id="5"></div>
+          <div class="box" id="6"></div>
+          <div class="box" id="7"></div>
+          <div class="box" id="8"></div>
+          <div class="box" id="9"></div>
+      </main>
+
+  <!-- win/draw message -->
+      <aside class="messages">
+        <span class="player1won">Player 1 Wins!</span>
+        <span class="player2won">Player 2 Wins!</span>
+        <span class="drawMessage">Draw</span>
+      </aside>
+
+  <!-- button -->
+      <footer class="buttons">
+        <button type="button" name="playAgain" id="playAgain">Play Again</button>
+      </footer>
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/ver1.js"></script>
 
   </body>
 </html>

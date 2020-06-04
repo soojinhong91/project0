@@ -1,34 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
 body {
   margin: 0;
+  font-family: 'Handlee', sans-serif;
+  background-color: aliceblue;
+  color: white;
 }
 
 .container {
-  width: 960px;
-  background-color: pink;
+  max-width: 960px;
   margin: 0 auto;
+  padding-bottom: 10px;
+  background-image: url("img/background.jpg");
+  position: relative;
 }
 
-h1 {
+h2 {
+  text-align: center;
   margin: 0;
+  padding-top: 1em;
+  font-size: 3em;
 }
 
-.grid {
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-  align-content: center;
-  justify-content: space-evenly;
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+p {
+  display: inline-block;
+  font-size: 2em;
+  align-items: center;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.gameBoard {
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 50px auto;
+  position: relative;
 }
 
 .box {
-  width: 100px;
-  height: 100px;
-  border: solid 1px black;
-  padding: 20px;
+  border: solid 5px white;
   font-size: 30px;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.box:hover{
+  background-color: darkgray; opacity: 0.6;
+}
+
+.box.active{
+    border-radius: 100px;
+    transition: 1s all;
+}
+
+span {
+  width: 400px;
+  height: 70px;
+  box-sizing: border-box;
+  background-color: coral;
+  text-align: center;
+  font-size: 2em;
+  line-height: 70px;
+  display: none;
+  position: absolute;
+  bottom: 130px;
+  left: 280px;
+}
+
+span.show {
+  display: block;
+  z-index: 5;
+}
+
+.buttons{
+  text-align: center;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  font-size: 1.5em;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  display: inline-block;
+  font-family: 'Handlee', sans-serif;
 }
